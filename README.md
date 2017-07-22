@@ -1,3 +1,4 @@
+# TA-Lib
 # 简介：
 Talib一直缺乏有效的中文文档，自己又有空闲时间，且在研究量化对冲系统，就发点时间，做一下翻译。
 原文地址： [TA-LIB document](https://mrjbq7.github.io/ta-lib/)
@@ -123,18 +124,19 @@ print talib.get_function_groups()
 
 ### Function Groups
 
-* [Overlap Studies 重叠的研究]()
-* [Momentum Indicators 动量指标]()
-* [Volume Indicators 量指标]()
-* [Volatility Indicators 波动性指标]()
-* [Price Transform 价格]()
-* [Cycle Indicators 循环指标]()
-* [Pattern Recognition 模式识别]()
-* [Statistic Functions 统计功能]()
-* [Math Transform 数学变换]()
-* [Math Operators 数学运算符]()
+* [Overlap Studies 重叠的研究](func_groups/overlap_studies.md)
+* [Momentum Indicators 动量指标](func_groups/momentum_indicators.md)
+* [Volume Indicators 量指标](func_groups/volume_indicators.md)
+* [Volatility Indicators 波动性指标](func_groups/volatility_indicators.md)
+* [Price Transform 价格指标](func_groups/price_transform.md)
+* [Cycle Indicators 循环指标](func_groups/cycle_indicators.md)
+* [Pattern Recognition 模式识别](func_groups/pattern_recognition.md)
+* [Statistic Functions 统计功能](func_groups/statistic_functions.md)
+* [Math Transform 数学变换](func_groups/math_transform.md)
+* [Math Operators 数学运算符](func_groups/math_operators.md)
 
-#### [Overlap Studies]()
+
+#### [Overlap Studies](func_groups/overlap_studies.md)
 
 ```
 BBANDS               Bollinger Bands #布林带
@@ -156,7 +158,7 @@ TRIMA                Triangular Moving Average
 WMA                  Weighted Moving Average
 ```
 
-#### [Momentum Indicators](func_groups/momentum_indicators.html)
+#### [Momentum Indicators](func_groups/momentum_indicators.md)
 
 ```
 ADX                  Average Directional Movement Index
