@@ -189,5 +189,5 @@ real = WILLR(high, low, close, timeperiod=14)
 
 Learn more about the Williams' %R at [tadoc.org](http://www.tadoc.org/indicator/WILLR.htm).  
 
-[Documentation Index](../doc_index.html)
-[FLOAT_RIGHTAll Function Groups](../funcs.html)
+[Documentation Index](../doc_index.md)
+[FLOAT_RIGHTAll Function Groups](../funcs.md)

@@ -343,135 +343,263 @@ integer = CDLKICKING(open, high, low, close)
 ```
 
 ### CDLKICKINGBYLENGTH - Kicking - bull/bear determined by the longer marubozu
+> 函数名：CDLKICKINGBYLENGTH  
+名称：Kicking - bull/bear determined by the longer marubozu 由较长缺影线决定的反冲形态  
+简介：二日K线模式，与反冲形态类似，较长缺影线决定价格的涨跌。  
+
 ```python
 integer = CDLKICKINGBYLENGTH(open, high, low, close)
 ```
 
-### CDLLADDERBOTTOM - Ladder Bottom
+### CDLLADDERBOTTOM - Ladder Bottom 
+> 函数名：CDLLADDERBOTTOM  
+名称：Ladder Bottom 梯底  
+简介：五日K线模式，下跌趋势中，前三日阴线，
+开盘价与收盘价皆低于前一日开盘、收盘价，第四日倒锤头，第五日开盘价高于前一日开盘价，
+阳线，收盘价高于前几日价格振幅，预示着底部反转。  
+
 ```python
 integer = CDLLADDERBOTTOM(open, high, low, close)
 ```
 
 ### CDLLONGLEGGEDDOJI - Long Legged Doji
+
+> 函数名：CDLLONGLEGGEDDOJI  
+名称：Long Legged Doji 长脚十字  
+简介：一日K线模式，开盘价与收盘价相同居当日价格中部，上下影线长，
+表达市场不确定性。  
+
 ```python
 integer = CDLLONGLEGGEDDOJI(open, high, low, close)
 ```
 
 ### CDLLONGLINE - Long Line Candle
+> 函数名：CDLLONGLINE  
+名称：Long Line Candle 长蜡烛  
+简介：一日K线模式，K线实体长，无上下影线。  
+
 ```python
 integer = CDLLONGLINE(open, high, low, close)
 ```
 
 ### CDLMARUBOZU - Marubozu
+函数名：CDLMARUBOZU   
+名称：Marubozu 光头光脚/缺影线  
+简介：一日K线模式，上下两头都没有影线的实体，
+阴线预示着熊市持续或者牛市反转，阳线相反。  
+
 ```python
 integer = CDLMARUBOZU(open, high, low, close)
 ```
 
 ### CDLMATCHINGLOW - Matching Low
+> 函数名：CDLMATCHINGLOW  
+名称：Matching Low 相同低价  
+简介：二日K线模式，下跌趋势中，第一日长阴线，
+第二日阴线，收盘价与前一日相同，预示底部确认，该价格为支撑位。  
+
 ```python
 integer = CDLMATCHINGLOW(open, high, low, close)
 ```
 
 ### CDLMATHOLD - Mat Hold
+> 函数名：CDLMATHOLD  
+名称：Mat Hold 铺垫  
+简介：五日K线模式，上涨趋势中，第一日阳线，第二日跳空高开影线，
+第三、四日短实体影线，第五日阳线，收盘价高于前四日，预示趋势持续。  
+
 ```python
 integer = CDLMATHOLD(open, high, low, close, penetration=0)
 ```
 
 ### CDLMORNINGDOJISTAR - Morning Doji Star
+>函数名：CDLMORNINGDOJISTAR  
+名称：Morning Doji Star 十字晨星  
+简介：三日K线模式，
+基本模式为晨星，第二日K线为十字星，预示底部反转。  
+
+
 ```python
 integer = CDLMORNINGDOJISTAR(open, high, low, close, penetration=0)
 ```
 
 ### CDLMORNINGSTAR - Morning Star
+> 函数名：CDLMORNINGSTAR  
+名称：Morning Star 晨星  
+简介：三日K线模式，下跌趋势，第一日阴线，
+第二日价格振幅较小，第三天阳线，预示底部反转。  
+
 ```python
 integer = CDLMORNINGSTAR(open, high, low, close, penetration=0)
 ```
 
 ### CDLONNECK - On-Neck Pattern
+> 函数名：CDLONNECK  
+名称：On-Neck Pattern 颈上线  
+简介：二日K线模式，下跌趋势中，第一日长阴线，第二日开盘价较低，
+收盘价与前一日最低价相同，阳线，实体较短，预示着延续下跌趋势。  
+
 ```python
 integer = CDLONNECK(open, high, low, close)
 ```
 
 ### CDLPIERCING - Piercing Pattern
+> 函数名：CDLPIERCING  
+名称：Piercing Pattern 刺透形态  
+简介：两日K线模式，下跌趋势中，第一日阴线，第二日收盘价低于前一日最低价，
+收盘价处在第一日实体上部，预示着底部反转。
 ```python
 integer = CDLPIERCING(open, high, low, close)
 ```
 
 ### CDLRICKSHAWMAN - Rickshaw Man
+> 函数名：CDLRICKSHAWMAN  
+名称：Rickshaw Man 黄包车夫  
+简介：一日K线模式，与长腿十字线类似，
+若实体正好处于价格振幅中点，称为黄包车夫。  
+
 ```python
 integer = CDLRICKSHAWMAN(open, high, low, close)
 ```
 
 ### CDLRISEFALL3METHODS - Rising/Falling Three Methods
+> 函数名：CDLRISEFALL3METHODS
+名称：Rising/Falling Three Methods 上升/下降三法  
+简介： 五日K线模式，以上升三法为例，上涨趋势中，
+第一日长阳线，中间三日价格在第一日范围内小幅震荡，
+第五日长阳线，收盘价高于第一日收盘价，预示股价上升。  
+
 ```python
 integer = CDLRISEFALL3METHODS(open, high, low, close)
 ```
 
 ### CDLSEPARATINGLINES - Separating Lines
+> 函数名：CDLSEPARATINGLINES  
+名称：Separating Lines 分离线  
+简介：二日K线模式，上涨趋势中，第一日阴线，第二日阳线，
+第二日开盘价与第一日相同且为最低价，预示着趋势继续。  
+
 ```python
 integer = CDLSEPARATINGLINES(open, high, low, close)
 ```
 
 ### CDLSHOOTINGSTAR - Shooting Star
+> 函数名：CDLSHOOTINGSTAR  
+名称：Shooting Star 射击之星  
+简介：一日K线模式，上影线至少为实体长度两倍，
+没有下影线，预示着股价下跌  
 ```python
 integer = CDLSHOOTINGSTAR(open, high, low, close)
 ```
 
 ### CDLSHORTLINE - Short Line Candle
+> 函数名：CDLSHORTLINE  
+名称：Short Line Candle 短蜡烛  
+简介：一日K线模式，实体短，无上下影线  
+
 ```python
 integer = CDLSHORTLINE(open, high, low, close)
 ```
 
 ### CDLSPINNINGTOP - Spinning Top
+> 函数名：CDLSPINNINGTOP  
+名称：Spinning Top 纺锤  
+简介：一日K线，实体小。  
+
 ```python
 integer = CDLSPINNINGTOP(open, high, low, close)
 ```
 
 ### CDLSTALLEDPATTERN - Stalled Pattern
+> 函数名：CDLSTALLEDPATTERN  
+名称：Stalled Pattern 停顿形态  
+简介：三日K线模式，上涨趋势中，第二日长阳线，
+第三日开盘于前一日收盘价附近，短阳线，预示着上涨结束  
+
 ```python
 integer = CDLSTALLEDPATTERN(open, high, low, close)
 ```
 
 ### CDLSTICKSANDWICH - Stick Sandwich
+> 函数名：CDLSTICKSANDWICH  
+名称：Stick Sandwich 条形三明治  
+简介：三日K线模式，第一日长阴线，第二日阳线，开盘价高于前一日收盘价，
+第三日开盘价高于前两日最高价，收盘价于第一日收盘价相同。  
+
 ```python
 integer = CDLSTICKSANDWICH(open, high, low, close)
 ```
 
 ### CDLTAKURI - Takuri (Dragonfly Doji with very long lower shadow)
+> 函数名：CDLTAKURI  
+名称：Takuri (Dragonfly Doji with very long lower shadow) 
+探水竿  
+简介：一日K线模式，大致与蜻蜓十字相同，下影线长度长。  
+
 ```python
 integer = CDLTAKURI(open, high, low, close)
 ```
 
 ### CDLTASUKIGAP - Tasuki Gap
+> 函数名：CDLTASUKIGAP  
+名称：Tasuki Gap 跳空并列阴阳线  
+简介：三日K线模式，分上涨和下跌，以上升为例，
+前两日阳线，第二日跳空，第三日阴线，收盘价于缺口中，上升趋势持续。  
+
 ```python
 integer = CDLTASUKIGAP(open, high, low, close)
 ```
 
 ### CDLTHRUSTING - Thrusting Pattern
+> 函数名：CDLTHRUSTING  
+名称：Thrusting Pattern 插入  
+简介：二日K线模式，与颈上线类似，下跌趋势中，第一日长阴线，第二日开盘价跳空，
+收盘价略低于前一日实体中部，与颈上线相比实体较长，预示着趋势持续。  
+
 ```python
 integer = CDLTHRUSTING(open, high, low, close)
 ```
 
 ### CDLTRISTAR - Tristar Pattern
+> 函数名：CDLTRISTAR  
+名称：Tristar Pattern 三星  
+简介：三日K线模式，由三个十字组成，
+第二日十字必须高于或者低于第一日和第三日，预示着反转。  
+
 ```python
 integer = CDLTRISTAR(open, high, low, close)
 ```
 
 ### CDLUNIQUE3RIVER - Unique 3 River
+> 函数名：CDLUNIQUE3RIVER  
+名称：Unique 3 River 奇特三河床  
+简介：三日K线模式，下跌趋势中，第一日长阴线，第二日为锤头，最低价创新低，第三日开盘价低于第二日收盘价，收阳线，
+收盘价不高于第二日收盘价，预示着反转，第二日下影线越长可能性越大。  
+
 ```python
 integer = CDLUNIQUE3RIVER(open, high, low, close)
 ```
 
 ### CDLUPSIDEGAP2CROWS - Upside Gap Two Crows
+> 函数名：CDLUPSIDEGAP2CROWS  
+名称：Upside Gap Two Crows 向上跳空的两只乌鸦  
+简介：三日K线模式，第一日阳线，第二日跳空以高于第一日最高价开盘，
+收阴线，第三日开盘价高于第二日，收阴线，与第一日比仍有缺口。  
+
 ```python
 integer = CDLUPSIDEGAP2CROWS(open, high, low, close)
 ```
 
 ### CDLXSIDEGAP3METHODS - Upside/Downside Gap Three Methods
+> 函数名：CDLXSIDEGAP3METHODS  
+名称：Upside/Downside Gap Three Methods 上升/下降跳空三法  
+简介：五日K线模式，以上升跳空三法为例，上涨趋势中，第一日长阳线，第二日短阳线，第三日跳空阳线，第四日阴线，开盘价与收盘价于前两日实体内，
+第五日长阳线，收盘价高于第一日收盘价，预示股价上升。  
+
 ```python
 integer = CDLXSIDEGAP3METHODS(open, high, low, close)
 ```
 
 
-[Documentation Index](../doc_index.html)
-[FLOAT_RIGHTAll Function Groups](../funcs.html)
+[文档](../doc_index.md)
+[FLOAT_RIGHTAll Function Groups](../funcs.md)

@@ -104,4 +104,4 @@ ma20 = SMA(20)
 
 欲了解更多详情，请看 [code](https://github.com/mrjbq7/ta-lib/blob/master/talib/abstract.pyx#L46).
 
-[文档](doc_index.html)
+[文档](doc_index.md)
