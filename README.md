@@ -23,7 +23,7 @@ Talib一直缺乏有效的中文文档，自己又有空闲时间，且在研究
 
 #### 安装TA-Lib
 
-## 案例
+## 案例（快速开始）
 
 Similar to TA-Lib, the function interface provides a lightweight wrapper of
 the exposed TA-Lib indicators.  
@@ -68,7 +68,7 @@ upper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)
 output = talib.MOM(close, timeperiod=5)
 ```
 
-## Abstract API Quick Start
+## Abstract API Quick Start 
 
 If you're already familiar with using the function API, you should feel right
 at home using the abstract API. Every function takes the same input, passed
