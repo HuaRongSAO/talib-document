@@ -110,19 +110,45 @@ Learn more about the Balance Of Power at [tadoc.org](http://www.tadoc.org/indica
 * 5.CCI指标曲线从下向上突破+100线而进入非常态区间(超买区)时，表明市场价格已经脱离常态而进入强势状态，如果伴随较大的市场交投，应及时介入成功率将很大。
 * 6.CCI指标曲线从下向上突破+100线而进入非常态区间(超买区)后，只要CCI指标曲线一直朝上运行，表明价格依然保持强势可以继续持有待涨。但是，如果在远离+100线的地方开始掉头向下时，则表明市场价格的强势状态将可能难以维持，涨势可能转弱，应考虑卖出。如果前期的短期涨幅过高同时价格回落时交投活跃，则应该果断逢高卖出或做空。
 * CCI主要是在超买和超卖区域发生作用，对急涨急跌的行情检测性相对准确。非常适用于股票、外汇、贵金属等市场的短期操作。[1] 
+
 ```python
 real = CCI(high, low, close, timeperiod=14)
 ```
 
 Learn more about the Commodity Channel Index at [tadoc.org](http://www.tadoc.org/indicator/CCI.htm).  
-### CMO - Chande Momentum Oscillator
+### CMO - Chande Momentum Oscillator 钱德动量摆动指标
+
+> 函数名：CMO  
+名称：钱德动量摆动指标  
+简介：与其他动量指标摆动指标如相对强弱指标（RSI）和随机指标（KDJ）不同，钱德动量指标在计算公式的分子中采用上涨日和下跌日的数据。
+计算公式：CMO=（Su－Sd）*100/（Su+Sd）  
+其中：Su是今日收盘价与昨日收盘价（上涨日）差值加总。若当日下跌，则增加值为0；Sd是今日收盘价与做日收盘价（下跌日）差值的绝对值加总。若当日上涨，则增加值为0；
+
+
+#### 指标应用
+* 本指标类似RSI指标。  
+* 当本指标下穿-50水平时是买入信号，上穿+50水平是卖出信号。  
+* 钱德动量摆动指标的取值介于-100和100之间。  
+* 本指标也能给出良好的背离信号。  
+* 当股票价格创出新低而本指标未能创出新低时，出现牛市背离；  
+* 当股票价格创出新高而本指标未能创出新高时，当出现熊市背离时。
+* 我们可以用移动均值对该指标进行平滑。
+
 NOTE: The ``CMO`` function has an unstable period.  
 ```python
 real = CMO(close, timeperiod=14)
 ```
 
 Learn more about the Chande Momentum Oscillator at [tadoc.org](http://www.tadoc.org/indicator/CMO.htm).  
-### DX - Directional Movement Index
+### DX - Directional Movement Index DMI指标又叫动向指标或趋向指标
+
+> 函数名：DX  
+名称：动向指标或趋向指标  
+简介：通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。  
+分析和应用：[百度百科](https://baike.baidu.com/item/DMI%E6%8C%87%E6%A0%87/3423254?fr=aladdin) 
+[维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E5%90%91%E6%8C%87%E6%95%B8) 
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=DMI)   
+
 NOTE: The ``DX`` function has an unstable period.  
 ```python
 real = DX(high, low, close, timeperiod=14)
@@ -130,12 +156,22 @@ real = DX(high, low, close, timeperiod=14)
 
 Learn more about the Directional Movement Index at [tadoc.org](http://www.tadoc.org/indicator/DX.htm).  
 ### MACD - Moving Average Convergence/Divergence
+> 函数名：MACD  
+名称：平滑异同移动平均线  
+简介：利用收盘价的短期（常用为12日）指数移动平均线与长期（常用为26日）指数移动平均线之间的聚合与分离状况，对买进、卖出时机作出研判的技术指标。
+分析和应用：[百度百科](https://baike.baidu.com/item/MACD%E6%8C%87%E6%A0%87?fromtitle=MACD&fromid=3334786) 
+[维基百科](https://zh.wikipedia.org/wiki/MACD) 
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=MACD)   
 ```python
 macd, macdsignal, macdhist = MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)
 ```
 
 Learn more about the Moving Average Convergence/Divergence at [tadoc.org](http://www.tadoc.org/indicator/MACD.htm).  
 ### MACDEXT - MACD with controllable MA type
+
+> 函数名：MACDEXT  (这个是干啥的(⊙o⊙)?)   
+名称：  
+
 ```python
 macd, macdsignal, macdhist = MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)
 ```
@@ -145,7 +181,13 @@ macd, macdsignal, macdhist = MACDEXT(close, fastperiod=12, fastmatype=0, slowper
 macd, macdsignal, macdhist = MACDFIX(close, signalperiod=9)
 ```
 
-### MFI - Money Flow Index
+### MFI - Money Flow Index 资金流量指标
+
+> 函数名：MFI  
+名称：资金流量指标    
+简介：属于量价类指标，反映市场的运行趋势  
+分析和应用：[百度百科](https://baike.baidu.com/item/mfi/7429225?fr=aladdin) 
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=MFI)  
 NOTE: The ``MFI`` function has an unstable period.  
 ```python
 real = MFI(high, low, close, volume, timeperiod=14)
@@ -153,6 +195,12 @@ real = MFI(high, low, close, volume, timeperiod=14)
 
 Learn more about the Money Flow Index at [tadoc.org](http://www.tadoc.org/indicator/MFI.htm).  
 ### MINUS_DI - Minus Directional Indicator
+> 函数名：DMI 中的DI指标 负方向指标 
+名称：下升动向值  
+简介：通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。  
+分析和应用：[百度百科](https://baike.baidu.com/item/DMI%E6%8C%87%E6%A0%87/3423254?fr=aladdin) 
+[维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E5%90%91%E6%8C%87%E6%95%B8) 
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=DMI) 
 NOTE: The ``MINUS_DI`` function has an unstable period.  
 ```python
 real = MINUS_DI(high, low, close, timeperiod=14)
@@ -160,13 +208,29 @@ real = MINUS_DI(high, low, close, timeperiod=14)
 
 Learn more about the Minus Directional Indicator at [tadoc.org](http://www.tadoc.org/indicator/MINUS_DI.htm).  
 ### MINUS_DM - Minus Directional Movement
+
+> 函数名：MINUS_DM   
+名称： 上升动向值 DMI中的DM代表正趋向变动值即上升动向值
+简介：通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。  
+分析和应用：[百度百科](https://baike.baidu.com/item/DMI%E6%8C%87%E6%A0%87/3423254?fr=aladdin) 
+[维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E5%90%91%E6%8C%87%E6%95%B8) 
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=DMI)   
+
 NOTE: The ``MINUS_DM`` function has an unstable period.  
 ```python
 real = MINUS_DM(high, low, timeperiod=14)
 ```
 
 Learn more about the Minus Directional Movement at [tadoc.org](http://www.tadoc.org/indicator/MINUS_DM.htm).  
-### MOM - Momentum
+### MOM - Momentum  动量
+
+> 函数名：MOM
+名称： 上升动向值
+简介：投资学中意思为续航，指股票(或经济指数)持续增长的能力。研究发现，赢家组合在牛市中存在着正的动量效应，输家组合在熊市中存在着负的动量效应。   
+分析和应用： 
+[维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E9%87%8F%E6%8C%87%E6%A8%99) 
+[同花顺学院](http://www.iwencai.com/yike/detail/auid/cb18b2dbe2f455e6)  
+
 ```python
 real = MOM(close, timeperiod=10)
 ```
@@ -186,13 +250,28 @@ real = PLUS_DM(high, low, timeperiod=14)
 ```
 
 Learn more about the Plus Directional Movement at [tadoc.org](http://www.tadoc.org/indicator/PLUS_DM.htm).  
-### PPO - Percentage Price Oscillator
+### PPO - Percentage Price Oscillator 价格震荡百分比指数
+
+> 函数名：PPO
+名称： 价格震荡百分比指数
+简介：价格震荡百分比指标（PPO）是一个和MACD指标非常接近的指标。
+PPO标准设定和MACD设定非常相似：12,26,9和PPO，和MACD一样说明了两条移动平均线的差距，但是它们有一个差别是PPO是用百分比说明。   
+分析和应用： 
+[参考](http://blog.sina.com.cn/s/blog_7542a31c0101aux9.html) 
+
 ```python
 real = PPO(close, fastperiod=12, slowperiod=26, matype=0)
 ```
 
 Learn more about the Percentage Price Oscillator at [tadoc.org](http://www.tadoc.org/indicator/PPO.htm).  
-### ROC - Rate of change : ((price/prevPrice)-1)*100
+### ROC - Rate of change : ((price/prevPrice)-1)*100  变动率指标
+
+> 函数名：ROC   
+名称： 变动率指标  
+简介：ROC是由当天的股价与一定的天数之前的某一天股价比较，其变动速度的大小,来反映股票市变动的快慢程度  
+分析和应用：[百度百科](https://baike.baidu.com/item/ROC%E6%8C%87%E6%A0%87/3081705?fr=aladdin) 
+[同花顺学院](http://www.iwencai.com/yike/detail/auid/6ac184fdb20d2f59)   
+
 ```python
 real = ROC(close, timeperiod=10)
 ```
@@ -216,14 +295,23 @@ real = ROCR100(close, timeperiod=10)
 ```
 
 Learn more about the Rate of change ratio 100 scale: (price/prevPrice)*100 at [tadoc.org](http://www.tadoc.org/indicator/ROCR100.htm).  
-### RSI - Relative Strength Index
+### RSI - Relative Strength Index  相对强弱指数
+
+> 函数名：RSI
+名称：相对强弱指数    
+简介：是通过比较一段时期内的平均收盘涨数和平均收盘跌数来分析市场买沽盘的意向和实力，从而作出未来市场的走势。   
+分析和应用：[百度百科](https://baike.baidu.com/item/RSI/6130115) 
+[维基百科](https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8) 
+[同花顺学院](http://www.iwencai.com/yike/detail/auid/6a280c6cebcf140a) 
+
 NOTE: The ``RSI`` function has an unstable period.  
 ```python
 real = RSI(close, timeperiod=14)
 ```
 
 Learn more about the Relative Strength Index at [tadoc.org](http://www.tadoc.org/indicator/RSI.htm).  
-### STOCH - Stochastic
+### STOCH - Stochastic KDJ指标中的KD指标
+
 ```python
 slowk, slowd = STOCH(high, low, close, fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0)
 ```
@@ -248,13 +336,28 @@ real = TRIX(close, timeperiod=30)
 ```
 
 Learn more about the 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA at [tadoc.org](http://www.tadoc.org/indicator/TRIX.htm).  
-### ULTOSC - Ultimate Oscillator
+### ULTOSC - Ultimate Oscillator 终极波动指标 
+
+> 函数名：ULTOSC
+名称：终极波动指标      
+简介：UOS是一种多方位功能的指标，除了趋势确认及超买超卖方面的作用之外，它的“突破”讯号不仅可以提供最适当的交易时机之外，更可以进一步加强指标的可靠度。   
+分析和应用：[百度百科](https://baike.baidu.com/item/%E7%BB%88%E6%9E%81%E6%B3%A2%E5%8A%A8%E6%8C%87%E6%A0%87/1982936?fr=aladdin&fromid=12610066&fromtitle=%E7%BB%88%E6%9E%81%E6%8C%87%E6%A0%87) 
+[同花顺学院](http://www.iwencai.com/yike/detail/auid/e89b98d39da975e4) 
+
 ```python
 real = ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28)
 ```
 
 Learn more about the Ultimate Oscillator at [tadoc.org](http://www.tadoc.org/indicator/ULTOSC.htm).  
-### WILLR - Williams' %R
+### WILLR - Williams' %R 威廉指标
+
+> 函数名：WILLR
+名称：威廉指标    
+简介：WMS表示的是市场处于超买还是超卖状态。股票投资分析方法主要有如下三种：基本分析、技术分析、演化分析。在实际应用中，它们既相互联系，又有重要区别。   
+分析和应用：[百度百科](https://baike.baidu.com/item/%E5%A8%81%E5%BB%89%E6%8C%87%E6%A0%87?fr=aladdin) 
+[维基百科](https://zh.wikipedia.org/wiki/%E5%A8%81%E5%BB%89%E6%8C%87%E6%A8%99) 
+[同花顺学院](http://www.iwencai.com/yike/detail/auid/967febb0316c57c1) 
+
 ```python
 real = WILLR(high, low, close, timeperiod=14)
 ```

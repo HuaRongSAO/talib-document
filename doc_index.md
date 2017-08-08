@@ -4,7 +4,7 @@
 * [快速使用](func.md)
 * [高级应用](abstract.md)
 * [方法分类](funcs.md)
-    * [Overlap Studies 重叠的研究](func_groups/overlap_studies.md)
+    * [Overlap Studies 重叠的指标](func_groups/overlap_studies.md)
     * [Momentum Indicators 动量指标](func_groups/momentum_indicators.md)
     * [Volume Indicators 量指标](func_groups/volume_indicators.md)
     * [Volatility Indicators 波动性指标](func_groups/volatility_indicators.md)
