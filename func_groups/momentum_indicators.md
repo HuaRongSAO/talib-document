@@ -195,7 +195,7 @@ real = MFI(high, low, close, volume, timeperiod=14)
 
 Learn more about the Money Flow Index at [tadoc.org](http://www.tadoc.org/indicator/MFI.htm).  
 ### MINUS_DI - Minus Directional Indicator
-> 函数名：DMI 中的DI指标 负方向指标 
+> 函数名：DMI 中的DI指标 负方向指标    
 名称：下升动向值  
 简介：通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。  
 分析和应用：[百度百科](https://baike.baidu.com/item/DMI%E6%8C%87%E6%A0%87/3423254?fr=aladdin) 
@@ -210,7 +210,7 @@ Learn more about the Minus Directional Indicator at [tadoc.org](http://www.tadoc
 ### MINUS_DM - Minus Directional Movement
 
 > 函数名：MINUS_DM   
-名称： 上升动向值 DMI中的DM代表正趋向变动值即上升动向值
+名称： 上升动向值 DMI中的DM代表正趋向变动值即上升动向值  
 简介：通过分析股票价格在涨跌过程中买卖双方力量均衡点的变化情况，即多空双方的力量的变化受价格波动的影响而发生由均衡到失衡的循环过程，从而提供对趋势判断依据的一种技术指标。  
 分析和应用：[百度百科](https://baike.baidu.com/item/DMI%E6%8C%87%E6%A0%87/3423254?fr=aladdin) 
 [维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E5%90%91%E6%8C%87%E6%95%B8) 
@@ -224,8 +224,8 @@ real = MINUS_DM(high, low, timeperiod=14)
 Learn more about the Minus Directional Movement at [tadoc.org](http://www.tadoc.org/indicator/MINUS_DM.htm).  
 ### MOM - Momentum  动量
 
-> 函数名：MOM
-名称： 上升动向值
+> 函数名：MOM  
+名称： 上升动向值  
 简介：投资学中意思为续航，指股票(或经济指数)持续增长的能力。研究发现，赢家组合在牛市中存在着正的动量效应，输家组合在熊市中存在着负的动量效应。   
 分析和应用： 
 [维基百科](https://zh.wikipedia.org/wiki/%E5%8B%95%E9%87%8F%E6%8C%87%E6%A8%99) 
@@ -253,8 +253,8 @@ Learn more about the Plus Directional Movement at [tadoc.org](http://www.tadoc.o
 ### PPO - Percentage Price Oscillator 价格震荡百分比指数
 
 > 函数名：PPO
-名称： 价格震荡百分比指数
-简介：价格震荡百分比指标（PPO）是一个和MACD指标非常接近的指标。
+名称： 价格震荡百分比指数  
+简介：价格震荡百分比指标（PPO）是一个和MACD指标非常接近的指标。  
 PPO标准设定和MACD设定非常相似：12,26,9和PPO，和MACD一样说明了两条移动平均线的差距，但是它们有一个差别是PPO是用百分比说明。   
 分析和应用： 
 [参考](http://blog.sina.com.cn/s/blog_7542a31c0101aux9.html) 
@@ -297,8 +297,8 @@ real = ROCR100(close, timeperiod=10)
 Learn more about the Rate of change ratio 100 scale: (price/prevPrice)*100 at [tadoc.org](http://www.tadoc.org/indicator/ROCR100.htm).  
 ### RSI - Relative Strength Index  相对强弱指数
 
-> 函数名：RSI
-名称：相对强弱指数    
+> 函数名：RSI  
+名称：相对强弱指数     
 简介：是通过比较一段时期内的平均收盘涨数和平均收盘跌数来分析市场买沽盘的意向和实力，从而作出未来市场的走势。   
 分析和应用：[百度百科](https://baike.baidu.com/item/RSI/6130115) 
 [维基百科](https://zh.wikipedia.org/wiki/%E7%9B%B8%E5%B0%8D%E5%BC%B7%E5%BC%B1%E6%8C%87%E6%95%B8) 
@@ -310,8 +310,10 @@ real = RSI(close, timeperiod=14)
 ```
 
 Learn more about the Relative Strength Index at [tadoc.org](http://www.tadoc.org/indicator/RSI.htm).  
-### STOCH - Stochastic KDJ指标中的KD指标
+### STOCH - Stochastic 随机指标,俗称KD 
 
+> 函数名：STOCH  
+名称：随机指标,俗称KD 
 ```python
 slowk, slowd = STOCH(high, low, close, fastk_period=5, slowk_period=3, slowk_matype=0, slowd_period=3, slowd_matype=0)
 ```
@@ -338,7 +340,7 @@ real = TRIX(close, timeperiod=30)
 Learn more about the 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA at [tadoc.org](http://www.tadoc.org/indicator/TRIX.htm).  
 ### ULTOSC - Ultimate Oscillator 终极波动指标 
 
-> 函数名：ULTOSC
+> 函数名：ULTOSC  
 名称：终极波动指标      
 简介：UOS是一种多方位功能的指标，除了趋势确认及超买超卖方面的作用之外，它的“突破”讯号不仅可以提供最适当的交易时机之外，更可以进一步加强指标的可靠度。   
 分析和应用：[百度百科](https://baike.baidu.com/item/%E7%BB%88%E6%9E%81%E6%B3%A2%E5%8A%A8%E6%8C%87%E6%A0%87/1982936?fr=aladdin&fromid=12610066&fromtitle=%E7%BB%88%E6%9E%81%E6%8C%87%E6%A0%87) 
@@ -351,7 +353,7 @@ real = ULTOSC(high, low, close, timeperiod1=7, timeperiod2=14, timeperiod3=28)
 Learn more about the Ultimate Oscillator at [tadoc.org](http://www.tadoc.org/indicator/ULTOSC.htm).  
 ### WILLR - Williams' %R 威廉指标
 
-> 函数名：WILLR
+> 函数名：WILLR  
 名称：威廉指标    
 简介：WMS表示的是市场处于超买还是超卖状态。股票投资分析方法主要有如下三种：基本分析、技术分析、演化分析。在实际应用中，它们既相互联系，又有重要区别。   
 分析和应用：[百度百科](https://baike.baidu.com/item/%E5%A8%81%E5%BB%89%E6%8C%87%E6%A0%87?fr=aladdin) 

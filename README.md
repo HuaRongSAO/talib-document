@@ -15,8 +15,8 @@ Talib一直缺乏有效的中文文档，自己又有空闲时间，且在研究
 >   Bands, etc.
 > * Candlestick pattern recognition
 > * Open-source API for C/C++, Java, Perl, Python and 100% Managed .NET    
-> * 包含了炒股150+的数据指标：ADX, MACD, RSI, Stochastic, Bollinger Bands, etc.
-> * K线趋势识别
+> * 包含了150多个指标,包括：ADX, MACD, RSI, Stochastic, Bollinger Bands, 等.
+> * K线形态识别
 > * 完全开源，支持 C/C++, Java, Perl, Python and 100% Managed .NET
 
 
@@ -27,7 +27,7 @@ Talib一直缺乏有效的中文文档，自己又有空闲时间，且在研究
 
 Similar to TA-Lib, the function interface provides a lightweight wrapper of
 the exposed TA-Lib indicators.  
-类似于TA库，对函数接口进行了一个轻量级的封装，用于公开的ta-lib的指标。
+类似于TA-Lib，函数接口提供了一个暴漏TA-Lib指标的轻量级封装。
 
 Each function returns an output array and have default values for their
 parameters, unless specified as keyword arguments. Typically, these functions
@@ -68,7 +68,7 @@ upper, middle, lower = talib.BBANDS(close, matype=MA_Type.T3)
 output = talib.MOM(close, timeperiod=5)
 ```
 
-## Abstract API Quick Start 
+## Abstract API Quick Start 抽象 API 快速入门
 
 If you're already familiar with using the function API, you should feel right
 at home using the abstract API. Every function takes the same input, passed
@@ -108,7 +108,7 @@ slowk, slowd = STOCH(input_arrays, 5, 3, 0, 3, 0, prices=['high', 'low', 'open']
 
 了解更多高级使用TA库 [here]().
 
-## Supported Indicators 支持指标
+## Supported Indicators 支持的指标
 
 We can show all the TA functions supported by TA-Lib, either as a ``list`` or
 as a ``dict`` sorted by group (e.g. "Overlap Studies", "Momentum Indicators",
@@ -124,14 +124,14 @@ print talib.get_function_groups()
 
 ### Function Groups
 
-* [Overlap Studies 重叠的研究](func_groups/overlap_studies.md)
+* [Overlap Studies 重叠研究](func_groups/overlap_studies.md)
 * [Momentum Indicators 动量指标](func_groups/momentum_indicators.md)
-* [Volume Indicators 量指标](func_groups/volume_indicators.md)
+* [Volume Indicators 成交量指标](func_groups/volume_indicators.md)
 * [Volatility Indicators 波动性指标](func_groups/volatility_indicators.md)
 * [Price Transform 价格指标](func_groups/price_transform.md)
-* [Cycle Indicators 循环指标](func_groups/cycle_indicators.md)
-* [Pattern Recognition 模式识别](func_groups/pattern_recognition.md)
-* [Statistic Functions 统计功能](func_groups/statistic_functions.md)
+* [Cycle Indicators 周期指标](func_groups/cycle_indicators.md)
+* [Pattern Recognition 形态识别](func_groups/pattern_recognition.md)
+* [Statistic Functions 统计函数](func_groups/statistic_functions.md)
 * [Math Transform 数学变换](func_groups/math_transform.md)
 * [Math Operators 数学运算符](func_groups/math_operators.md)
 
@@ -150,12 +150,12 @@ MAVP                 Moving average with variable period #变周期移动平均
 MIDPOINT             MidPoint over period #在周期的中点
 MIDPRICE             Midpoint Price over period #中间时段价格
 SAR                  Parabolic SAR #抛物线转向指标
-SAREXT               Parabolic SAR - Extended
-SMA                  Simple Moving Average
+SAREXT               Parabolic SAR - Extended #抛物线转向指标 - 扩展
+SMA                  Simple Moving Average# 简单移动平均线
 T3                   Triple Exponential Moving Average (T3)
 TEMA                 Triple Exponential Moving Average
 TRIMA                Triangular Moving Average
-WMA                  Weighted Moving Average
+WMA                  Weighted Moving Average#加权移动平均线
 ```
 
 #### [Momentum Indicators](func_groups/momentum_indicators.md)
