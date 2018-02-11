@@ -1,4 +1,4 @@
-# Overlap Studies Functions 重叠指标
+# Overlap Studies Functions 重叠研究指标
 ### BBANDS - Bollinger Bands
 
 > 函数名：BBANDS   
@@ -129,8 +129,8 @@ real = SAREXT(high, low, startvalue=0, offsetonreverse=0, accelerationinitlong=0
 
 ### SMA - Simple Moving Average 简单移动平均线
 
-> 函数名：SMA   （不明和ma有什么区别）
-名称： 移动平均线  
+> 函数名：SMA  
+名称： 简单移动平均线  
 简介：移动平均线，Moving Average，简称MA，原本的意思是移动平均，由于我们将其制作成线形，所以一般称之为移动平均线，简称均线。它是将某一段时间的收盘价之和除以该周期。 比如日线MA5指5天内的收盘价除以5 。  
 [百度百科](https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87%E7%BA%BF/217887?fromtitle=MA&fromid=1511750#viewPageContent) 
 [同花顺学院](http://www.iwencai.com/yike/detail/auid/a04d723659318237?rid=96)   
@@ -143,7 +143,7 @@ real = SMA(close, timeperiod=30)
 Learn more about the Simple Moving Average at [tadoc.org](http://www.tadoc.org/indicator/SMA.htm).  
 ### T3 - Triple Exponential Moving Average (T3) 三重指数移动平均线
 
-> 函数名：T3
+> 函数名：T3  
 名称：三重指数移动平均线  
 简介：TRIX长线操作时采用本指标的讯号，长时间按照本指标讯号交易，获利百分比大于损失百分比，利润相当可观。 比如日线MA5指5天内的收盘价除以5 。  
 [百度百科](https://baike.baidu.com/item/%E4%B8%89%E9%87%8D%E6%8C%87%E6%95%B0%E5%B9%B3%E6%BB%91%E5%B9%B3%E5%9D%87%E7%BA%BF/15749345?fr=aladdin) 
@@ -176,8 +176,8 @@ real = TRIMA(close, timeperiod=30)
 Learn more about the Triangular Moving Average at [tadoc.org](http://www.tadoc.org/indicator/TRIMA.htm).  
 ### WMA - Weighted Moving Average 移动加权平均法
 
-> 函数名：WMA
-名称：移动加权平均法  
+> 函数名：WMA  
+名称：加权移动平均线  
 简介：移动加权平均法是指以每次进货的成本加上原有库存存货的成本，除以每次进货数量与原有库存存货的数量之和，据以计算加权平均单位成本，以此为基础计算当月发出存货的成本和期末存货的成本的一种方法。  
 [百度百科](https://baike.baidu.com/item/%E7%A7%BB%E5%8A%A8%E5%8A%A0%E6%9D%83%E5%B9%B3%E5%9D%87%E6%B3%95/10056490?fr=aladdin&fromid=16799870&fromtitle=%E5%8A%A0%E6%9D%83%E7%A7%BB%E5%8A%A8%E5%B9%B3%E5%9D%87) 
 [同花顺学院](http://www.iwencai.com/yike/detail/auid/262b1dfd1c68ee30)   

@@ -1,4 +1,4 @@
-# All Supported Indicators and Functions
+# All Supported Indicators and Functions 所有支持的指标和函数
 
 * [Overlap Studies](func_groups/overlap_studies.md)
 * [Momentum Indicators](func_groups/momentum_indicators.md)

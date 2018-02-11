@@ -1,4 +1,4 @@
-# Pattern Recognition Functions 模式识别的功能
+# Pattern Recognition Functions 形态识别
    
 ### CDL2CROWS - Two Crows
 > 函数名：CDL2CROWS   
