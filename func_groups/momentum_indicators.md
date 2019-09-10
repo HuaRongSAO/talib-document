@@ -139,7 +139,7 @@ NOTE: The ``CMO`` function has an unstable period.
 real = CMO(close, timeperiod=14)
 ```
 
-Learn more about the Chande Momentum Oscillator at [tadoc.org](http://www.tadoc.org/indicator/CMO.htm).  
+Learn more about the Chande Momentum Oscillator at [tadoc.org](http://www.tadoc.org/indicator/CMO.htm).
 ### DX - Directional Movement Index DMI指标又叫动向指标或趋向指标
 
 > 函数名：DX  
@@ -158,27 +158,34 @@ Learn more about the Directional Movement Index at [tadoc.org](http://www.tadoc.
 ### MACD - Moving Average Convergence/Divergence
 > 函数名：MACD  
 名称：平滑异同移动平均线  
-简介：利用收盘价的短期（常用为12日）指数移动平均线与长期（常用为26日）指数移动平均线之间的聚合与分离状况，对买进、卖出时机作出研判的技术指标。
-分析和应用：[百度百科](https://baike.baidu.com/item/MACD%E6%8C%87%E6%A0%87?fromtitle=MACD&fromid=3334786) 
-[维基百科](https://zh.wikipedia.org/wiki/MACD) 
-[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=MACD)   
+简介：利用收盘价的短期（常用为12日）指数移动平均线与长期（常用为26日）指数移动平均线之间的聚合与分离状况，对买进、卖出时机作出研判的技术指标。  
+分析和应用：[百度百科](https://baike.baidu.com/item/MACD%E6%8C%87%E6%A0%87?fromtitle=MACD&fromid=3334786)
+[维基百科](https://zh.wikipedia.org/wiki/MACD)
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=MACD)  
 ```python
-macd, macdsignal, macdhist = MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)
+dif, dem, histogram = MACD(close, fastperiod=12, slowperiod=26, signalperiod=9)
 ```
 
 Learn more about the Moving Average Convergence/Divergence at [tadoc.org](http://www.tadoc.org/indicator/MACD.htm).  
 ### MACDEXT - MACD with controllable MA type
 
-> 函数名：MACDEXT  (这个是干啥的(⊙o⊙)?)   
-名称：  
-
+> 函数名：MACDEXT  
+名称：平滑异同移动平均线(可控制移动平均算法)  
+简介：同MACD函数(固定使用EMA作为matype),并提供参数控制计算DIF, DEM时使用的移动平均算法。计算DIF时使用fastmatype与slowmatype，计算DEM时使用signalmatype，`Histogram = DIF - DEM`。matype参数详见`talib.MA_Type`与`Overlap Studies Functions 重叠研究指标`文档。  
+分析和应用：[百度百科](https://baike.baidu.com/item/MACD%E6%8C%87%E6%A0%87?fromtitle=MACD&fromid=3334786)
+[维基百科](https://zh.wikipedia.org/wiki/MACD)
+[同花顺学院](http://www.iwencai.com/school/search?cg=100&w=MACD)  
 ```python
-macd, macdsignal, macdhist = MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)
+dif, dem, histogram = MACDEXT(close, fastperiod=12, fastmatype=0, slowperiod=26, slowmatype=0, signalperiod=9, signalmatype=0)
 ```
 
 ### MACDFIX - Moving Average Convergence/Divergence Fix 12/26
+
+> 函数名：MFI  
+名称：平滑异同移动平均线(固定快慢均线周期为12/26)  
+简介：同MACD函数, 固定快均线周期fastperiod=12, 慢均线周期slowperiod=26.  
 ```python
-macd, macdsignal, macdhist = MACDFIX(close, signalperiod=9)
+dif, dem, histogram = MACDFIX(close, signalperiod=9)
 ```
 
 ### MFI - Money Flow Index 资金流量指标
