@@ -27,7 +27,7 @@ Talib一直缺乏有效的中文文档，自己又有空闲时间，且在研究
 
 Similar to TA-Lib, the function interface provides a lightweight wrapper of
 the exposed TA-Lib indicators.  
-类似于TA-Lib，函数接口提供了一个暴漏TA-Lib指标的轻量级封装。
+类似于TA-Lib，函数接口提供了一个暴露TA-Lib指标的轻量级封装。
 
 Each function returns an output array and have default values for their
 parameters, unless specified as keyword arguments. Typically, these functions
@@ -153,8 +153,8 @@ SAR                  Parabolic SAR #抛物线转向指标
 SAREXT               Parabolic SAR - Extended #抛物线转向指标 - 扩展
 SMA                  Simple Moving Average# 简单移动平均线
 T3                   Triple Exponential Moving Average (T3)
-TEMA                 Triple Exponential Moving Average
-TRIMA                Triangular Moving Average
+TEMA                 Triple Exponential Moving Average#三次指数移动平均
+TRIMA                Triangular Moving Average# 三角形移动平均
 WMA                  Weighted Moving Average#加权移动平均线
 ```
 
